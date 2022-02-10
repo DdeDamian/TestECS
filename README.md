@@ -1,2 +1,2 @@
 # TestECS
-This is a POc on ECS working with Terraform
+This is a POC on ECS working with Terraform
