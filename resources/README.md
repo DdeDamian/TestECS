@@ -56,8 +56,8 @@
 
 | Name | Description |
 |------|-------------|
+| load_balancer_dns | Application Load Balancer DNS |
 | private_subnets | List of IDs of private subnets |
 | public_subnets | List of IDs of public subnets |
 | vpc_cidr_block | The CIDR block of the VPC |
 | vpc_id | The ID of the VPC |
-| vpc_nat_public_ip | The public IP of NATgw's vpc |
