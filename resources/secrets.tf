@@ -17,7 +17,7 @@ resource "aws_kms_alias" "ecs_secrets_key_alias" {
 # -------------------------------------------------------------
 
 resource "aws_secretsmanager_secret" "ecs_secret" {
-  name        = "ecs/test/secret"
+  name        = "ecs/test/my_secret"
   description = "Secret to be injected on container"
   kms_key_id  = aws_kms_key.ecs_secrets_key.key_id
 }
