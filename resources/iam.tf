@@ -1,4 +1,9 @@
-# Policy to allow ECR pull
+# -------------------------------------------------------------
+# Policies creation
+# -------------------------------------------------------------
+
+# Policy to define ECR pull permissions
+# This will be achieve using the assume role capability
 data "aws_iam_policy_document" "assume_role_policy" {
   statement {
     actions = ["sts:AssumeRole"]
@@ -10,7 +15,9 @@ data "aws_iam_policy_document" "assume_role_policy" {
   }
 }
 
-# Policy to allow secrets handling
+# Policy document to define secrets handling permissions
+# This will allow our role to access the secret we created
+# and access to the KMS key to decript the secret.
 data "aws_iam_policy_document" "secret_handling" {
   statement {
     actions = [

@@ -1,3 +1,7 @@
+# -------------------------------------------------------------
+# CloudWatch log group to store ECS logs
+# -------------------------------------------------------------
+
 resource "aws_cloudwatch_log_group" "log-group" {
   name = "${local.app_name}-${terraform.workspace}-logs"
 

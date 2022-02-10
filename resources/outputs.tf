@@ -12,11 +12,6 @@ output "vpc_cidr_block" {
   value       = module.vpc.vpc_cidr_block
 }
 
-output "vpc_nat_public_ip" {
-  description = "The public IP of NATgw's vpc"
-  value       = module.vpc.nat_public_ips[0]
-}
-
 output "public_subnets" {
   description = "List of IDs of public subnets"
   value       = module.vpc.public_subnets
@@ -27,7 +22,7 @@ output "private_subnets" {
   value       = module.vpc.private_subnets
 }
 
-output "" {
-  description = "List of IDs of private subnets"
-  value       = module.vpc.private_subnets
+output "load_balancer_dns" {
+  description = "Application Load Balancer DNS"
+  value       = aws_alb.application_load_balancer.dns_name
 }
