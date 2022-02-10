@@ -25,11 +25,12 @@ data "aws_iam_policy_document" "secret_handling" {
   }
 }
 
+# Policies creation
 resource "aws_iam_policy" "secret_handling_policy" {
   name        = "secret_handling_policy"
   path        = "/"
   description = "Allows secrets handling"
-  policy = data.aws_iam_policy_document.secret_handling.json
+  policy      = data.aws_iam_policy_document.secret_handling.json
 }
 
 resource "aws_iam_role" "ecs_etr" {
@@ -41,6 +42,7 @@ resource "aws_iam_role" "ecs_etr" {
   }
 }
 
+# Policies attachments
 resource "aws_iam_role_policy_attachment" "ecs_etr_policy" {
   role       = aws_iam_role.ecs_etr.name
   policy_arn = "arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceforEC2Role"

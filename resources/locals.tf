@@ -3,13 +3,13 @@ locals {
   # AWS account settings
   # -------------------------------------------------------------
   env_account_id = {
-    stage   = 931366402038
-    prod    = ""
+    stage = 931366402038
+    prod  = ""
   }
 
   region = {
-    stage   = "us-east-1"
-    prod    = "us-east-1"
+    stage = "us-east-1"
+    prod  = "us-east-1"
   }
 
   # -------------------------------------------------------------
@@ -17,28 +17,28 @@ locals {
   # -------------------------------------------------------------
 
   vpc_name = {
-    stage   = "stage-vpc"
-    prod    = "prod-vpc"
+    stage = "stage-vpc"
+    prod  = "prod-vpc"
   }
 
   vpc_cidr = {
-    stage   = "177.25.0.0/16"
-    prod    = "177.26.0.0/16"
+    stage = "177.25.0.0/16"
+    prod  = "177.26.0.0/16"
   }
 
   azs = {
-    stage   = ["us-east-1a", "us-east-1b", "us-east-1c"]
-    prod    = ["us-east-1a", "us-east-1c", "us-east-1d"]
+    stage = ["us-east-1a", "us-east-1b", "us-east-1c"]
+    prod  = ["us-east-1a", "us-east-1c", "us-east-1d"]
   }
 
   public_subnets_cidrs = {
-    stage   = ["177.25.1.0/24", "177.25.3.0/24"]
-    prod    = ["177.26.1.0/24", "177.26.3.0/24"]
+    stage = ["177.25.1.0/24", "177.25.3.0/24"]
+    prod  = ["177.26.1.0/24", "177.26.3.0/24"]
   }
 
   private_subnets_cidrs = {
-    stage   = ["177.25.2.0/24", "177.25.4.0/24"]
-    prod    = ["177.26.2.0/24", "177.26.4.0/24"]
+    stage = ["177.25.2.0/24", "177.25.4.0/24"]
+    prod  = ["177.26.2.0/24", "177.26.4.0/24"]
   }
 
   # -------------------------------------------------------------
