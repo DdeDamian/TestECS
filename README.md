@@ -10,6 +10,9 @@ Also an environment variables HELLO=world and PASSWORD=secret should be injected
 
 ## Diagram
 
+<img src="(https://viewer.diagrams.net/?tags=%7B%7D&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Diagram.drawio#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FDdeDamian%2FTestECS%2Fmain%2FDiagram.drawio" alt="Diagram"/>
+
+
 ## Resources
 
 To achieve this goal we define the following AWS resources
